@@ -5,12 +5,13 @@ import { filterEpisodes } from './api/filterEpisodes.js'; // Añadí la extensi�
 async function main() {
   try {
     // Obtener todos los episodios
-    const allEpisodes = await getAllEpisodes();
-    console.log('Todos los episodios:', allEpisodes);
+    //const allEpisodes = await getAllEpisodes();
+    //console.table(allEpisodes);
 
     // Filtrar episodios por nombre y estado
     const filteredEpisodes = await filterEpisodes('rick', 'alive');
     console.log('Episodios filtrados:', filteredEpisodes);
+    //console.table(filteredEpisodes);
   } catch (error) {
     console.error('Error:', error.message);
   }
